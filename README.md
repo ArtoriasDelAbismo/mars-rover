@@ -52,6 +52,12 @@ To access NASA's API:
    ```
 3. Get your free API key from [NASA's API portal](https://api.nasa.gov/).
 
+### 🖼️ Image Gallery
+- View a collection of stunning images taken by the selected rover on Mars.
+
+![Mars Rover Explorer](https://github.com/ArtoriasDelAbismo/mars-rover/blob/master/src/assets/rover-project-2.png)
+
+
 ## Future Enhancements
 - Add search filters for images based on date or camera type.
 - Improve UI design for better user experience.
