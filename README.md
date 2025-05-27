@@ -69,3 +69,5 @@ This project is licensed under the **MIT License**.
 ---
 Feel free to contribute, report issues, or suggest improvements! ✨
 
+![App Screenshot](https://github.com/ArtoriasDelAbismo/mars-rover/blob/master/public/github.png?raw=true)
+
