@@ -1,0 +1,293 @@
+/* Home.css */
+
+/* Header */
+.header {
+    background-color: #000;
+    display: flex;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    width: 30%;
+  }
+  
+  .search-bar {
+    display: flex;
+  }
+  
+  .search-input {
+    border-radius: 4px;
+  }
+  
+  .search-button {
+    height: 30px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Logo */
+  .logo {
+    position: absolute;
+    right: 48%;
+    width: 70px;
+    height: 70px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Hero Section */
+  .hero-overlay {
+    background-color: red;
+    filter: sepia(1) hue-rotate(-20deg) saturate(3);
+    margin: auto;
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    opacity: 0.5;
+    align-content: center;
+    z-index: 1;
+  }
+  
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 450px;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .mission-info {
+    margin-top: 30px;
+  }
+  
+  .mission-numbers {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .mission-stat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+    text-align: start;
+    margin: 0;
+    color: #88b2e9;
+  }
+  
+  .stat-description {
+    margin: 0;
+  }
+  
+  /* Background Image */
+  .hero-background {
+    height: 500px;
+    align-content: center;
+    background-image: url('/src/assets/mars-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* Section divider */
+
+  .section-divider {
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(247, 68, 68, 0.2), #000000);
+  }
+
+/* Featured topics section */
+
+
+.featured-title{
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  font-size: 0.8rem;
+  font-family: dm-mono;
+  font-style: normal;
+  font-family: "Public Sans Web",sans-serif;
+  font-weight: 500;
+  line-height: 1em;
+  letter-spacing: 3.3px;
+  margin-left: 130px;
+  text-align: start;
+}
+
+.featured-topics{
+  padding: 1rem 2rem;
+  text-align: start;
+  min-height: 10vh;
+  background-color: #000000;
+  margin-top: -9;
+  padding-bottom: 60px;
+}
+
+.featured-unordered{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 50px;
+  padding: 0;
+  
+}
+
+.featured-unordered li {
+  width: 350px;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.span-icon {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  border-radius: 50%;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+  
+
+  /* Explore section */
+.explore-section {
+  padding: 4rem 2rem;
+  background-color: #242424;
+  text-align: start;
+  align-content: center;
+  min-height: 40vh;
+  background-image: url('https://science.nasa.gov/wp-content/uploads/2017/11/pia24543-curiosity-selfie-1920x640-1.jpg?w=1536');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.explore-title {
+  font-size: 2rem;
+  padding: 0;
+  padding-left: 40px;
+  margin-bottom: 1rem;
+  margin: 0;
+}
+
+.explore-description {
+  width: 50vw;
+  font-size: 1.2rem;
+  color: #ffffff;
+  padding-left: 40px;
+  margin-bottom: 2rem;
+  text-align: start;
+}
+
+.explore-button {
+  padding: 0.8rem 1.5rem;
+  margin-left: 40px;
+  font-size: 1rem;
+  background-color: #c1440e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.explore-button-link{
+  text-decoration: none;
+}
+
+.explore-button:hover {
+  background-color: #9e3308;
+}
+
+/* APOD Section */
+
+.apod-section{
+  padding: 4rem 2rem;
+  background-color: #242424;
+  text-align: start;
+  align-content: center;
+  min-height: 40vh;
+}
+
+.apod-title{
+  font-size: 2rem;
+  padding: 0;
+  padding-left: 40px;
+  margin-bottom: 1rem;
+  margin: 0;
+}
+
+.apod-description{
+  width: 50vw;
+  font-size: 1.2rem;
+  color: #ffffff;
+  padding-left: 40px;
+  margin-bottom: 2rem;
+  text-align: start;
+}
+
+/* WHY DO WE GO SECTION */
+
+.wdwg-section{
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  text-align: start;
+  align-content: center;
+  min-height: 40vh;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wdwg-title{
+  font-size: 2rem;
+  padding: 0;
+  padding-left: 40px;
+  margin-bottom: 1rem;
+  margin: 0;
+}
+
+.wdwg-description{
+  color: #000;
+  width: 50vw;
+  font-size: 1.2rem;
+  padding-left: 40px;
+  margin-bottom: 2rem;
+  text-align: start;
+}
+
+/* Footer */
+.footer-section{
+  height: 500px;
+}

@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { curiosityData, perseveranceData } from "../data.js";
-import "../pages/RoverDetails.css";
+import { curiosityData, perseveranceData } from "../data/data.js";
+import "../styles/RoverDetails.css";
 import { getRoverPhotos, getRoverInfo } from "../api.js";
+import Header from "./Header.jsx";
 
 export default function RoverDetails() {
   const { roverName } = useParams();
-  const [rover, setRover] = useState([]);
+  const [rover, setRover] = useState(null);
   const [photos, setPhotos] = useState([]);
   const [sol, setSol] = useState(1);
   const [searchSol, setSearchSol] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [imageLoading, setImageLoading] = useState(true);
   const { infoCuriosity } = curiosityData;
   const { infoPerseverance } = perseveranceData;
+  const [isModalOpen, setIsModalOpen] = useState(null);
+  const [selectedPhoto, setSelectedPhoto] = useState("");
 
   useEffect(() => {
     if (roverName) {
@@ -31,7 +35,7 @@ export default function RoverDetails() {
 
   useEffect(() => {
     if (roverName && sol) {
-      setLoading(true);
+      setImageLoading(true);
       getRoverPhotos(roverName, sol)
         .then((photos) => {
           console.log("Rover Photos: ", photos);
@@ -40,12 +44,15 @@ export default function RoverDetails() {
         .catch((error) => {
           console.error(error);
         })
-        .finally(() => setLoading(false));
+        .finally(() => {
+          setImageLoading(false);
+        });
     }
   }, [roverName, sol]);
 
   return (
     <div>
+      <Header />
       {loading ? (
         <p>Loading...</p>
       ) : (
@@ -76,6 +83,7 @@ export default function RoverDetails() {
                   </div>
                 </div>
               </div>
+
               <div className="martian-sol-selector">
                 <h2>Select Martian Sol</h2>
                 <form
@@ -95,26 +103,49 @@ export default function RoverDetails() {
                 </form>
               </div>
 
-              <h2>Images from sol: {sol}</h2>
+              <h2>Images from Sol: {sol}</h2>
               <div className="images-div">
-                {photos.length > 0 ? (
+                {imageLoading ? (
+                  <div className="spinner"></div>
+                ) : photos.length > 0 ? (
                   photos.map((photo) => (
                     <img
                       key={photo.id}
                       src={photo.img_src}
                       alt="Mars Rover"
-                      width={"200px"}
-                      height={"200px"}
+                      className="rover-photo fade-in"
+                      onClick={() => {
+                        setSelectedPhoto(photo.img_src);
+                        setIsModalOpen(true);
+                      }}
                     />
                   ))
                 ) : (
-                  <p>No images found</p>
+                  <p>No images found for Sol {sol}. Try another one!</p>
                 )}
               </div>
             </div>
           ) : (
             <p>No data</p>
           )}
+
+          {isModalOpen && (
+            <div
+              className="modal-overlay"
+              onClick={() => setIsModalOpen(false)}
+            >
+              <div
+                className="modal-content"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <img src={selectedPhoto} alt="Mars Rover Large" />
+              </div>
+            </div>
+          )}
+
+          <footer>
+            <div className="footer-div"></div>
+          </footer>
         </>
       )}
     </div>

@@ -1,0 +1,107 @@
+.section-divider-selector{
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(36, 36, 36, 0.5), #000000);
+}
+
+.rover-selector {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #000000;
+  }
+  
+  .rover-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+  
+  .rover-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #666;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .rover-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  
+  .rover-item {
+    background: white;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .rover-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .rover-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  /* Optionally add specific rover backgrounds */
+  .curiosity {
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  }
+  
+  .perseverance {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  }
+
+  .rover-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .rover-list {
+    display: flex;
+    gap: 3rem;
+    list-style-type: none;
+  
+  }
+  
+  .rover-item {
+    border-radius: 4px;
+    padding: 150px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  .curiosity {
+    background-image: url('../src/assets/curiosity.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .opportunity {
+    background-image: url('../src/assets/opportunity.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .perseverance {
+    background-image: url('../src/assets/perseverance.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  

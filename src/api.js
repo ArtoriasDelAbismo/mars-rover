@@ -17,7 +17,7 @@ export async function getRoverPhotos(roverName, sol) {
         
         const data = await res.json();
         
-        // Check if the data is empty or has photos
+    
         if (!data || !data.photos) {
             throw new Error('No photos found');
         }
@@ -25,7 +25,7 @@ export async function getRoverPhotos(roverName, sol) {
         return data.photos;
     } catch (error) {
         console.error('Error fetching rover photos:', error);
-        return [];  // Return an empty array if there's an error
+        return [];  
     }
 }
 

@@ -16,3 +16,41 @@ export const perseveranceData = {
         objective: "Seek signs of ancient life and collect samples of rock and regolith for possible Earth return"
     }
 }
+
+export const heroData = {
+    infoHero :{
+        title: 'Mars trek expeditions site',
+        subtitle:'Mission status',
+        missionStatus: {
+            spacecrafts: '03',
+            spacecrafts_description: 'NASA Spacecraft in orbit',
+            rovers: '02',
+            rovers_description: 'NASA Rovers on the surface'
+        }
+    }
+}
+
+export const featuredData = {
+    title:'Featured topics',
+    jezero: 'Perseverance reaches top of Jezero Crater',
+    goals: 'Read the Mars Exploration Science Goals',
+    rock_samples: "Perseverance's Rock Samples Collection",
+    images:{
+        jezero: 'https://assets.science.nasa.gov/dynamicimage/assets/science/missions/mars2020/2024/10/jpl-20241017-perseverance-driving-map-animation/Perseverance%20Driving%20Map%20Animation%20-%20Thumbnail%201%20w%20logo.jpg?w=3840&h=2160&fit=clip&crop=faces%2Cfocalpoint',
+        goals: 'https://assets.science.nasa.gov/dynamicimage/assets/science/psd/mars/resources/detail_files/2/4/24767_mars_sample_return_20200210.jpg?w=1600&h=900&fit=clip&crop=faces%2Cfocalpoint',
+        rocks: 'https://assets.science.nasa.gov/dynamicimage/assets/science/missions/mars2020/2024/12/20241206-mars-rock-sample-montage/rock-sample-images/16x9/Mars%20Sample%20-%2016x9%20-%20Core%2021%20-%20Comet%20Geyser%20-%2003122024%20-%20w%20Lower%20Third.jpg?w=3840&h=2160&fit=clip&crop=faces%2Cfocalpoint'
+    }
+}
+
+export const marsRoverData = {
+    title:'Explore the Red Planet',
+    description:'Dive deep into the missions that have unveiled the secrets of Mars. Meet the rovers, spacecrafts, and discoveries that are changing history.',
+    button: 'View Rovers'
+}
+
+export const apodData = {
+    title: 'Check out the Astronomy Picture Of The Day',
+    description: 'The NASA APOD features a daily image or photograph of the universe—ranging from stunning deep-space phenomena to breathtaking views of Earth and nearby planets. Each image is accompanied by a brief explanation written by professional astronomers, offering insights into the science, context, and beauty of the cosmos.',
+    button:'View APOD'
+}
+
